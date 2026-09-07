@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline | UMA Learnology</title>
+  <style>
+    :root {
+      --bg: #090d14;
+      --card: #0f172a;
+      --primary: #f59e0b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 2.5rem 2rem;
+      border-radius: 20px;
+      max-width: 440px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .logo {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      border: 2px solid var(--primary);
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 1.75rem;
+    }
+    .btn {
+      background: var(--primary);
+      color: #000;
+      font-weight: 700;
+      border: none;
+      padding: 0.85rem 1.75rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: opacity 0.2s;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="/logo.png" alt="UMA Learnology Logo" class="logo">
+    <h1>You're Currently Offline</h1>
+    <p>Please check your internet or Wi-Fi connection. Once connected, tap below to return to your UMA Learnology lectures and batches.</p>
+    <button class="btn" onclick="window.location.reload()">
+      🔄 Retry Connection
+    </button>
+  </div>
+</body>
+</html>
