@@ -52,12 +52,44 @@ export const StudentPortal = () => {
   const [isPayModalOpen, setIsPayModalOpen] = useState(false);
   const [payAmount, setPayAmount] = useState('');
 
-  // Active student object
-  const currentStudent = students.find((s) => s.rollNo === activeStudentRoll) || students[0];
-  const balance = (Number(currentStudent.totalFee) || 0) - (Number(currentStudent.paidFee) || 0);
+  // Active student object with robust fallback
+  const fallbackStudent = {
+    id: 'STU-2026-001',
+    name: 'Aarav Sharma',
+    rollNo: 'UMA-101',
+    batch: 'Morning Fluency Cohort (Batch A)',
+    courseName: 'Master Spoken English & Public Speaking Bootcamp',
+    phone: '+91 98765 43210',
+    email: 'aarav.sharma@example.com',
+    dob: '2006-05-15',
+    bloodGroup: 'O+',
+    parentName: 'Ramesh Sharma',
+    parentPhone: '+91 98000 00000',
+    totalFee: 18000,
+    paidFee: 18000,
+    feeStatus: 'Paid',
+    photo: defaultLogo,
+    validTill: '31-Mar-2027',
+    attendancePercentage: 96,
+    presentDays: 80,
+    totalDays: 82,
+    recentTestRank: 'AIR 4',
+    recentTestScore: '94/100',
+    performanceScores: [
+      { test: 'Speaking & Pronunciation Mock 1', score: 94, max: 100 },
+      { test: 'Grammar & Active/Passive Quiz', score: 92, max: 100 }
+    ],
+    remarks: 'Active student, outstanding pronunciation progress.'
+  };
+
+  const currentStudent = (students && students.length > 0)
+    ? (students.find((s) => s.rollNo === activeStudentRoll) || students[0])
+    : fallbackStudent;
+
+  const balance = (Number(currentStudent?.totalFee) || 0) - (Number(currentStudent?.paidFee) || 0);
 
   // Filter doubts for this student
-  const studentDoubts = doubts.filter(d => d.studentRoll === currentStudent.rollNo);
+  const studentDoubts = doubts && currentStudent ? doubts.filter(d => d.studentRoll === currentStudent.rollNo) : [];
 
   const handleDoubtSubmit = (e) => {
     e.preventDefault();

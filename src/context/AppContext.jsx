@@ -25,7 +25,14 @@ export const AppProvider = ({ children }) => {
   });
 
   // Active View / Portal: 'public', 'student-portal', 'admin', 'id-studio', 'fees-hub', 'youtube-hub'
-  const [currentView, setCurrentView] = useState('public');
+  const [currentView, setCurrentView] = useState(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const viewParam = params.get('view');
+      if (viewParam) return viewParam;
+    } catch (e) {}
+    return 'public';
+  });
 
   // Admin Security Authentication State (persisted in sessionStorage - defaults to locked/false for visitors)
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(() => {
