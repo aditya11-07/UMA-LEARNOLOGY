@@ -652,7 +652,7 @@ export const StudentPortal = () => {
                 <div className={`id-card-flipper ${isFlipped ? 'flipped' : ''}`}>
                   
                   {/* FRONT */}
-                  <div className="id-card-side id-card-front" style={{ padding: '1.25rem', position: 'relative' }}>
+                  <div className="id-card-side id-card-front">
                     <div className="id-card-slot"></div>
                     <div style={{ textAlign: 'center', marginTop: '0.5rem', marginBottom: '0.75rem' }}>
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', marginBottom: '2px' }}>
@@ -664,13 +664,13 @@ export const StudentPortal = () => {
                       <div style={{ fontSize: '0.62rem', opacity: 0.85, textTransform: 'uppercase' }}>STUDENT IDENTITY BADGE</div>
                     </div>
 
-                    <div style={{ width: '96px', height: '96px', borderRadius: '50%', overflow: 'hidden', border: '3px solid #f59e0b', margin: '0 auto 0.75rem' }}>
+                    <div style={{ width: '92px', height: '92px', borderRadius: '50%', overflow: 'hidden', border: '3px solid #f59e0b', margin: '0 auto 0.65rem' }}>
                       <img src={currentStudent.photo} alt={currentStudent.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
 
-                    <div style={{ textAlign: 'center', marginBottom: '0.75rem' }}>
-                      <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#fff' }}>{currentStudent.name}</h3>
-                      <div style={{ display: 'inline-block', background: '#f59e0b', color: '#000', fontFamily: 'var(--font-mono)', fontWeight: 900, fontSize: '0.82rem', padding: '2px 8px', borderRadius: '4px' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '0.65rem' }}>
+                      <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#fff' }}>{currentStudent.name}</h3>
+                      <div style={{ display: 'inline-block', background: '#f59e0b', color: '#000', fontFamily: 'var(--font-mono)', fontWeight: 900, fontSize: '0.8rem', padding: '2px 8px', borderRadius: '4px' }}>
                         {currentStudent.rollNo}
                       </div>
                     </div>
@@ -689,7 +689,7 @@ export const StudentPortal = () => {
                   </div>
 
                   {/* BACK */}
-                  <div className="id-card-side id-card-back" style={{ padding: '1.25rem', position: 'relative' }}>
+                  <div className="id-card-side id-card-back">
                     <div className="id-card-slot"></div>
                     <div style={{ textAlign: 'center', marginTop: '0.5rem', marginBottom: '0.75rem' }}>
                       <div style={{ fontWeight: 800, fontSize: '0.85rem', color: '#f59e0b' }}>OFFICIAL VERIFICATION QR</div>
@@ -704,6 +704,24 @@ export const StudentPortal = () => {
                       <div>Guardian: {currentStudent.parentName}</div>
                       <div>Helpline: {coachingInfo.phone}</div>
                       <div>Campus: {coachingInfo.address}</div>
+                    </div>
+
+                    <div style={{
+                      marginTop: '0.5rem',
+                      paddingTop: '0.5rem',
+                      borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'flex-end',
+                      fontSize: '0.62rem'
+                    }}>
+                      <div style={{ opacity: 0.8, maxWidth: '140px' }}>
+                        Official Student Digital Identity Card
+                      </div>
+                      <div style={{ textAlign: 'center' }}>
+                        <div style={{ fontFamily: 'cursive', fontSize: '0.85rem', color: '#f59e0b' }}>Uma Nandini</div>
+                        <div style={{ opacity: 0.75 }}>Director</div>
+                      </div>
                     </div>
                   </div>
 

@@ -120,7 +120,7 @@ export const IDCardStudio = () => {
                 <div className={`id-card-flipper ${isFlipped ? 'flipped' : ''}`}>
                   
                   {/* FRONT SIDE */}
-                  <div className="id-card-side id-card-front" style={{ padding: '1.25rem', position: 'relative' }}>
+                  <div className="id-card-side id-card-front">
                     {/* Lanyard Hole */}
                     <div className="id-card-slot"></div>
 
@@ -140,7 +140,7 @@ export const IDCardStudio = () => {
                     </div>
 
                     {/* Photo & Hologram */}
-                    <div style={{ position: 'relative', width: '100px', height: '100px', margin: '0 auto 0.75rem' }}>
+                    <div style={{ position: 'relative', width: '92px', height: '92px', margin: '0 auto 0.65rem' }}>
                       <div style={{
                         width: '100%',
                         height: '100%',
@@ -164,8 +164,8 @@ export const IDCardStudio = () => {
                     </div>
 
                     {/* Student Info */}
-                    <div style={{ textAlign: 'center', marginBottom: '0.75rem' }}>
-                      <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', marginBottom: '2px' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '0.65rem' }}>
+                      <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#ffffff', marginBottom: '2px' }}>
                         {currentStudent.name}
                       </h3>
                       <div style={{
@@ -174,7 +174,7 @@ export const IDCardStudio = () => {
                         color: '#000000',
                         fontFamily: 'var(--font-mono)',
                         fontWeight: 900,
-                        fontSize: '0.82rem',
+                        fontSize: '0.8rem',
                         padding: '2px 10px',
                         borderRadius: '4px'
                       }}>
@@ -186,11 +186,11 @@ export const IDCardStudio = () => {
                     <div style={{
                       background: 'rgba(0, 0, 0, 0.25)',
                       borderRadius: '10px',
-                      padding: '0.65rem 0.85rem',
-                      fontSize: '0.75rem',
+                      padding: '0.6rem 0.85rem',
+                      fontSize: '0.74rem',
                       display: 'flex',
                       flexDirection: 'column',
-                      gap: '4px',
+                      gap: '3px',
                       border: '1px solid rgba(255, 255, 255, 0.12)',
                       marginBottom: 'auto'
                     }}>
@@ -217,14 +217,14 @@ export const IDCardStudio = () => {
                     {/* Barcode Strip */}
                     {showBarcode && (
                       <div style={{
-                        marginTop: '0.5rem',
+                        marginTop: '0.4rem',
                         background: '#ffffff',
                         padding: '4px 8px',
                         borderRadius: '4px',
                         textAlign: 'center',
                         color: '#000'
                       }}>
-                        <div style={{ fontFamily: 'monospace', letterSpacing: '4px', fontSize: '0.85rem', fontWeight: 900 }}>
+                        <div style={{ fontFamily: 'monospace', letterSpacing: '4px', fontSize: '0.82rem', fontWeight: 900 }}>
                           ||| | |||| | ||||| ||| ||||
                         </div>
                         <div style={{ fontSize: '0.55rem', letterSpacing: '1px', marginTop: '-2px' }}>
@@ -235,7 +235,7 @@ export const IDCardStudio = () => {
                   </div>
 
                   {/* BACK SIDE */}
-                  <div className="id-card-side id-card-back" style={{ padding: '1.25rem', position: 'relative' }}>
+                  <div className="id-card-side id-card-back">
                     {/* Lanyard Hole */}
                     <div className="id-card-slot"></div>
 
