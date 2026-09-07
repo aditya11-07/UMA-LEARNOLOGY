@@ -1,11 +1,11 @@
 // UMA Learnology Service Worker - Cache-First for Assets, Network-First for Navigation
-const CACHE_NAME = 'uma-learnology-v1';
+const CACHE_NAME = 'uma-learnology-v2';
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/logo.png',
-  '/manifest.json',
-  '/offline.html'
+  './',
+  './index.html',
+  './logo.png',
+  './manifest.json',
+  './offline.html'
 ];
 
 // 1. Install Event - Cache App Shell
@@ -54,7 +54,7 @@ self.addEventListener('fetch', (event) => {
         .catch(() => {
           // If offline, serve cached index.html or offline fallback
           return caches.match(request).then((cachedResponse) => {
-            return cachedResponse || caches.match('/offline.html');
+            return cachedResponse || caches.match('./offline.html');
           });
         })
     );
@@ -73,7 +73,7 @@ self.addEventListener('fetch', (event) => {
             }
           })
           .catch(() => {
-            // Offline - no worries, cached is served
+            // Offline - served from cache
           });
         return cachedResponse;
       }
@@ -89,9 +89,8 @@ self.addEventListener('fetch', (event) => {
           return networkResponse;
         })
         .catch(() => {
-          // If requesting an image offline and not cached, could return fallback
           if (request.destination === 'image') {
-            return caches.match('/logo.png');
+            return caches.match('./logo.png');
           }
         });
     })

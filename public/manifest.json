@@ -1,9 +1,9 @@
 {
   "name": "UMA Learnology — Premier Coaching & EdTech",
-  "short_name": "UMA Learnology",
+  "short_name": "UMA Classes",
   "description": "Premier English, Competitive Exams & Academic Coaching with Smart ID Badges, Fee Hub, and YouTube Masterclasses",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#090d14",
@@ -17,16 +17,28 @@
   ],
   "icons": [
     {
-      "src": "/logo.png",
+      "src": "logo.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "/logo.png",
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "logo.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "shortcuts": [
@@ -34,22 +46,22 @@
       "name": "Student & Parent Portal",
       "short_name": "Student Portal",
       "description": "Access Student Attendance, Performance & Digital ID Badge",
-      "url": "/?view=student-portal",
-      "icons": [{ "src": "/logo.png", "sizes": "192x192" }]
+      "url": "./?view=student-portal",
+      "icons": [{ "src": "logo.png", "sizes": "192x192" }]
     },
     {
       "name": "YouTube Masterclasses",
       "short_name": "Video Hub",
       "description": "Watch Free English Grammar & Competitive Video Lectures",
-      "url": "/?view=youtube-hub",
-      "icons": [{ "src": "/logo.png", "sizes": "192x192" }]
+      "url": "./?view=youtube-hub",
+      "icons": [{ "src": "logo.png", "sizes": "192x192" }]
     },
     {
       "name": "Explore All Courses",
       "short_name": "Courses",
       "description": "Browse Spoken English, IELTS, SSC & Competitive Batches",
-      "url": "/?view=public#courses",
-      "icons": [{ "src": "/logo.png", "sizes": "192x192" }]
+      "url": "./?view=public#courses",
+      "icons": [{ "src": "logo.png", "sizes": "192x192" }]
     }
   ]
 }
