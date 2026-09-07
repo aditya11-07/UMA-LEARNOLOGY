@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import defaultLogo from '../assets/logo.png';
 import { Download, Sparkles, X, Smartphone, CheckCircle2, Share2, PlusSquare, ArrowUpRight } from './Icons';
 
 export const InstallAppBanner = ({ isOpenManual = false, onCloseManual }) => {
@@ -237,7 +238,7 @@ export const InstallAppBanner = ({ isOpenManual = false, onCloseManual }) => {
               border: '2px solid var(--primary)',
               flexShrink: 0
             }}>
-              <img src="/logo.png" alt="UMA Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src={defaultLogo} alt="UMA Classes Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
 
             <div style={{ minWidth: 0 }}>

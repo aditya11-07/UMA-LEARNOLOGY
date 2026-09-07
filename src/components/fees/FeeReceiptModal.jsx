@@ -1,5 +1,6 @@
 import React from 'react';
 import { useApp } from '../../context/AppContext';
+import defaultLogo from '../../assets/logo.png';
 import { QRCodeSVG } from 'qrcode.react';
 import {
   Printer,
@@ -85,7 +86,7 @@ export const FeeReceiptModal = ({ receipt, onClose }) => {
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '6px' }}>
                 <div style={{ width: '44px', height: '44px', borderRadius: '50%', overflow: 'hidden', border: '2px solid #f59e0b', background: '#fff', flexShrink: 0, boxShadow: '0 2px 8px rgba(0,0,0,0.15)' }}>
-                  <img src="/logo.png" alt="UMA Classes Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src={coachingInfo.logo && coachingInfo.logo !== '/logo.png' ? coachingInfo.logo : defaultLogo} alt="UMA Classes Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <h1 style={{ fontSize: '1.75rem', fontWeight: 900, color: '#064e3b', letterSpacing: '-0.5px', margin: 0 }}>
                   {coachingInfo.name}

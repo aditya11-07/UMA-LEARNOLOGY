@@ -1,5 +1,6 @@
 import React from 'react';
 import { useApp } from '../../context/AppContext';
+import defaultLogo from '../../assets/logo.png';
 import {
   GraduationCap,
   Youtube,
@@ -57,7 +58,7 @@ export const Footer = () => {
                 background: '#fff',
                 flexShrink: 0
               }}>
-                <img src={coachingInfo.logo || '/logo.png'} alt="UMA Learnology Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={coachingInfo.logo && coachingInfo.logo !== '/logo.png' ? coachingInfo.logo : defaultLogo} alt="UMA Classes Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <div style={{ fontSize: '1.45rem', fontWeight: 900, letterSpacing: '-0.5px', lineHeight: 1.15 }}>

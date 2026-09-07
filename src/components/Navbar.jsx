@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { InstallAppBanner } from './InstallAppBanner';
+import defaultLogo from '../assets/logo.png';
 import {
   GraduationCap,
   Youtube,
@@ -62,7 +63,7 @@ export const Navbar = () => {
           title="UMA Learnology - Where Learning Never Ends"
         >
           <div className="brand-avatar-box">
-            <img src={coachingInfo.logo || '/logo.png'} alt="UMA Learnology Logo" />
+            <img src={coachingInfo.logo && coachingInfo.logo !== '/logo.png' ? coachingInfo.logo : defaultLogo} alt="UMA Classes Logo" />
           </div>
 
           <div className="brand-text-block">

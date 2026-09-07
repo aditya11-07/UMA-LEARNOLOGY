@@ -112,11 +112,10 @@ export const AppProvider = ({ children }) => {
     const saved = localStorage.getItem('uma_coaching_info');
     if (saved) {
       try {
-        const parsed = JSON.parse(saved);
         return {
           ...INITIAL_COACHING_INFO,
           ...parsed,
-          logo: '/logo.png',
+          logo: (parsed.logo && parsed.logo !== '/logo.png' && parsed.logo !== 'logo.png') ? parsed.logo : INITIAL_COACHING_INFO.logo,
           youtubeLink: parsed.youtubeLink || INITIAL_COACHING_INFO.youtubeLink
         };
       } catch (e) {

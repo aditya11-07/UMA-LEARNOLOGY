@@ -1,3 +1,5 @@
+import defaultLogo from '../assets/logo.png';
+
 // Initial dataset for UMA Learnology Coaching & EdTech Platform
 
 export const INITIAL_COACHING_INFO = {
@@ -13,7 +15,7 @@ export const INITIAL_COACHING_INFO = {
   supportEmail: "support@umalearnology.com",
   address: "UMA Learnology Tower, 3rd Floor, Knowledge Park, Central Avenue, Sector 14",
   city: "New Delhi, PIN 110001",
-  logo: "/logo.png",
+  logo: defaultLogo,
   youtubeChannel: "UMA English Learnology",
   youtubeHandle: "@umaenglishlearnology",
   youtubeSubscribers: "1.25K Subscribers",

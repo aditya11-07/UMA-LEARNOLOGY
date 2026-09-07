@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
+import defaultLogo from '../../assets/logo.png';
 import { QRCodeSVG } from 'qrcode.react';
 import {
   UserCheck,
@@ -624,7 +625,7 @@ export const StudentPortal = () => {
                     <div style={{ textAlign: 'center', marginTop: '0.5rem', marginBottom: '0.75rem' }}>
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', marginBottom: '2px' }}>
                         <div style={{ width: '24px', height: '24px', borderRadius: '50%', overflow: 'hidden', border: '1.5px solid #f59e0b', background: '#fff', flexShrink: 0 }}>
-                          <img src="/logo.png" alt="logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                          <img src={coachingInfo.logo && coachingInfo.logo !== '/logo.png' ? coachingInfo.logo : defaultLogo} alt="logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
                         <span style={{ fontWeight: 900, fontSize: '1.05rem' }}>{coachingInfo.name}</span>
                       </div>
